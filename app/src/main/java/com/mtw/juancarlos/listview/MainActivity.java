@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //String[] arr = getResources().getStringArray(R.array.OS);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
                 R.layout.list_item,
