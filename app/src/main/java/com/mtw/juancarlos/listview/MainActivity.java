@@ -11,20 +11,50 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
+    String[] arr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //String[] arr = getResources().getStringArray(R.array.OS);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        arr = getResources().getStringArray(R.array.OS);
+       /* ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
                 R.layout.list_item,
                 R.id.label,
-                getResources().getStringArray(R.array.OS));
+                getResources().getStringArray(R.array.OS));*/
+
+        MyAdapter adapter = new MyAdapter();
 
         ListView lista = (ListView) findViewById(R.id.ListView);
         lista.setAdapter(adapter);
 
+    }
+
+    private class MyAdapter extends BaseAdapter{
+        @Override
+        public int getCount() {
+            return arr.length;
+            //return 0;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return position;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+
+
+            return null;
+        }
     }
 }
