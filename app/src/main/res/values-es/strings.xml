@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OS List</string>
+    <string name="app_name">Lista SO</string>
     <string-array name="OS">
         <item>Android</item>
         <item>Windows Phone</item>
